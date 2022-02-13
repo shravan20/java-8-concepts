@@ -42,3 +42,21 @@ System.out.println(converted);    // 999
 ```
 
 `Note:` Even without the `@FunctionalInterface`, it is valid as it meets the definition of **Functional Interface**
+
+- ### UnaryOperator
+
+`UnaryOperator` is a functional interface which extends `Function`. UnaryOperator takes one argument and returns result of the same data type of the argument passed.
+
+Examples:
+
+```java
+@FunctionalInterface
+public interface UnaryOperator<T> extends Function<T, T> {
+}
+```
+
+```java
+UnaryOperator<Integer> sqr = x -> x * x;
+Integer result = sqr.apply(5);
+System.out.println(result);    // 25
+```
