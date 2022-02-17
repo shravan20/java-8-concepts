@@ -60,3 +60,25 @@ UnaryOperator<Integer> sqr = x -> x * x;
 Integer result = sqr.apply(5);
 System.out.println(result);    // 25
 ```
+
+
+- ### Binary Operator
+
+`BinaryOperator` is functional interface which extends `BiFunction`. It takes two arguments of the same type and return a result of the same type of the arguments passed.
+
+**Note: BiFunction is a functional interface which accepts two arguments and produces result, i.e., 2-arity specialization.**
+
+Examples:
+
+```java
+@FunctionalInterface
+public interface BinaryOperator<T> extends BiFunction<T,T,T> {
+}
+```
+
+```
+BiOperator<Integer> add = (x,y) => x + y;
+Integer result = add.apply(5,5);
+System.out.println(result); // 10
+
+```
