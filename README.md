@@ -76,7 +76,7 @@ public interface BinaryOperator<T> extends BiFunction<T,T,T> {
 }
 ```
 
-```
+```java
 BiOperator<Integer> add = (x,y) => x + y;
 Integer result = add.apply(5,5);
 System.out.println(result); // 10
