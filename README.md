@@ -82,3 +82,25 @@ Integer result = add.apply(5,5);
 System.out.println(result); // 10
 
 ```
+
+- ### Function
+
+In Java 8, Function is a functional interface; it takes an argument (object of type T) and returns an object (object of type R). The argument and output can be a different type.
+
+
+`Function` is a functional interface in Java 8, which takes an argument (object of type T) and returns an object of type R. Here the argument passed and output can be of different types.
+
+Examples:
+
+```java
+@FunctionalInterface
+public interface Function<T, R> {
+      R apply(T t);
+}
+```
+
+```
+Function<String, Integer> func = x -> x.length();
+Integer size = func.apply("Helloo");   // 6
+System.out.println(size); // 6
+```
