@@ -104,3 +104,17 @@ Function<String, Integer> func = x -> x.length();
 Integer size = func.apply("Helloo");   // 6
 System.out.println(size); // 6
 ```
+
+- ### Predicate
+
+`Predicate` is a functional interface, which only allows one abstract method within the interface scope. It contains various default methods for composing predicates to complex logic terns [and, or, negate].
+
+
+Examples:
+
+```java
+Predicate<String> predicate = (str) -> str.length() > 0;
+
+predicate.test("shravan20");               // true
+predicate.negate().test("shravan20")       // false
+```
