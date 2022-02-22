@@ -20,6 +20,10 @@
   - [Supplier]()
   - [Consumer]()
 
+- [Default Methods for Interfaces]()
+- [Lambda Expressions]()
+- [Method/Constructor References]()
+
 ---
 
 ### Functional Interface
