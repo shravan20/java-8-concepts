@@ -137,3 +137,23 @@ public interface Supplier<T> {
 Supplier<Double> randomValue = () -> Math.random();
 System.out.println(randomValue.get());   // prints some random number
 ```
+
+- ### Consumer
+
+`Consumer` represent operations to be performed on a single input argument. Consumer interface consists of the following two functions:
+ - void accept(T t) // accepts one value and performs the operation on the given argument
+ - default Consumer <T> andThen(Consumer<? super T> after) //returns a composed Consumer wherein the parameterized Consumer will be executed after the first one
+
+
+Examples:
+
+```java
+
+/**
+* Assume a class Person with firstName and lastName as properties
+*/
+
+Consumer<Person> greeter = (p) -> System.out.println("Hello, " + p.firstName);
+greeter.accept(new Person("Luke", "Skywalker")); // Hello Luke
+```
+
