@@ -18,6 +18,7 @@
   - [Function]()
   - [Predicate]()
   - [Supplier]()
+  - [Consumer]()
 
 ---
 
@@ -117,4 +118,22 @@ Predicate<String> predicate = (str) -> str.length() > 0;
 
 predicate.test("shravan20");               // true
 predicate.negate().test("shravan20")       // false
+```
+
+- ### Supplier
+
+`Supplier` is a functional interface; which takes no arguments and returns a result. Unline Functions, Suppliers do not accept arguments. 
+
+Examples:
+
+```java
+@FunctionalInterface
+public interface Supplier<T> {
+    T get();
+}
+```
+
+```java
+Supplier<Double> randomValue = () -> Math.random();
+System.out.println(randomValue.get());   // prints some random number
 ```
