@@ -161,3 +161,46 @@ Consumer<Person> greeter = (p) -> System.out.println("Hello, " + p.firstName);
 greeter.accept(new Person("Luke", "Skywalker")); // Hello Luke
 ```
 
+
+
+### Default Methods for Interfaces
+
+
+Java 8 allows us to add non-abstract methods in the interfaces. These methods must be declared default methods. These were introduced to enable the functionality of lambda expression.
+
+Prior to Java 8, if a new method was introduced in an interface then all the implementing classes used to break, as we would need to provide the imlementation of that method in all the implementing classes.
+
+Sometimes methods have nly single implementation and there is no need to provide their implementation in each class. In such cases, we declare that method as default method in the interface and provide its implementation in the interface itself.
+
+Examples:
+
+```java
+public interface Vehicle {
+
+  void clean();
+  
+  default void start() {
+    System.out.println("Start vehicle");
+  }
+
+}
+
+
+public class Car implements Vehicle {
+
+    @Override
+    public void clean() {
+        System.out.println("Clean the vehicle");
+    }
+ 
+    
+    public static void main(String []args) {
+      Car car = new Car();
+      car.clean();  // Clean the vehicle
+      car.start();  // Start Vehicle
+    }
+
+}
+
+
+```
