@@ -207,3 +207,28 @@ public class Car implements Vehicle {
 
 ### Lambda Expression
 
+With the introduction of Lambda expressions in Java 8, Java now supports Higher Order Functions. The main concept in Lambda calculus is the expression. An expression can be expressed as:
+
+```math
+<expression> := <variable> | <function>| <application>
+```
+
+You can't use any arbitrary interface with lambda expressions. Only those interfaces which have only one non-object abstract method can be used with lambda expressions, i.e., can only be used with `FunctionalInterface`.
+
+Examples:
+
+```java
+interface MyMath {
+    int getDoubleOf(int a);
+}
+	
+MyMath d = a -> a * 2; // associated to the interface
+d.getDoubleOf(4); // is 8
+```
+
+
+
+
+
+
+Now, with the introduction of Lambda expressions in Java 8, Java supports higher order functions. Let us look at the canonical example of Lambda expression -- a sort function in Java's Collections class. The sort function has two variants -- one that takes a List and another that takes a List and a Comparator. The second sort function is an example of a Higher order function that accepts a lambda expression as shown below in the code snippet.
