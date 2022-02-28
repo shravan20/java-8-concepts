@@ -226,9 +226,3 @@ MyMath d = a -> a * 2; // associated to the interface
 d.getDoubleOf(4); // is 8
 ```
 
-
-
-
-
-
-Now, with the introduction of Lambda expressions in Java 8, Java supports higher order functions. Let us look at the canonical example of Lambda expression -- a sort function in Java's Collections class. The sort function has two variants -- one that takes a List and another that takes a List and a Comparator. The second sort function is an example of a Higher order function that accepts a lambda expression as shown below in the code snippet.
