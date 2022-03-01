@@ -226,3 +226,24 @@ MyMath d = a -> a * 2; // associated to the interface
 d.getDoubleOf(4); // is 8
 ```
 
+### Method/Constructor References
+
+Java 8 enables you to pass references of methods or constructors via the `::` keyword. A reference to a constructor takes the following syntax: `ClassName::new`. As constructor in Java is a special method, method reference could be applied to it too with the help of new as a method name.
+
+Whereas, the reference to an instance method holds the following syntax: `containingInstance::methodName`.
+
+Examples:
+```java
+
+// Reference to instance method
+User user = new User();
+boolean isLegalName = list.stream().anyMatch(user::isLegalName);
+
+
+// Reference to an Instance Method of an Object of a Particular Type
+long count = list.stream().filter(String::isEmpty).count();
+
+
+// Reference to a Constructor
+Stream<User> stream = list.stream().map(User::new);
+```
