@@ -13,16 +13,16 @@
 ## Table of Content
 
 - [Built-in Functional Interface](#functional-interface)
-  - [UnaryOperator]()
-  - [BinaryOperator]()
-  - [Function]()
-  - [Predicate]()
-  - [Supplier]()
-  - [Consumer]()
+  - [UnaryOperator](#unaryoperator)
+  - [BinaryOperator](#binaryoperator)
+  - [Function](#function)
+  - [Predicate](#predicate)
+  - [Supplier](#supplier)
+  - [Consumer](#consumer)
 
-- [Default Methods for Interfaces]()
-- [Lambda Expressions]()
-- [Method/Constructor References]()
+- [Default Methods for Interfaces](#default-methods-for-interfaces)
+- [Lambda Expressions](#lambda-expression)
+- [Method/Constructor References](#methodconstructor-references)
 
 ---
 
