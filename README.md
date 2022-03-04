@@ -23,6 +23,7 @@
 - [Default Methods for Interfaces](#default-methods-for-interfaces)
 - [Lambda Expressions](#lambda-expression)
 - [Method/Constructor References](#methodconstructor-references)
+- [Optional](#optional)
 
 ---
 
