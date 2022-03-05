@@ -248,3 +248,5 @@ long count = list.stream().filter(String::isEmpty).count();
 // Reference to a Constructor
 Stream<User> stream = list.stream().map(User::new);
 ```
+
+# Optional
