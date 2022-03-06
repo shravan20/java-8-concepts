@@ -250,3 +250,55 @@ Stream<User> stream = list.stream().map(User::new);
 ```
 
 # Optional
+
+The new Optional class is one of the most interesting feature introduced in Java 8 to handle `NullPointerExeception(NPE)`. Essentially a wrapper class that contains an optional value, i.e., it can contain an value or can be empty.
+
+Prior to Optional class, if we have to print simple statement like `System.out.println(user.getAddress().getCountry().getIsocode().toUpperCase())`, we had to nest it under several conditional clauses to avoid NPE, as shown below:
+
+```java
+
+if (user != null) {
+    Address address = user.getAddress();
+    if (address != null) {
+        Country country = address.getCountry();
+        if (country != null) {
+            String isocode = country.getIsocode();
+            if (isocode != null) {
+                System.out.println(user.getAddress().getCountry().getIsocode().toUpperCase());
+            }
+        }
+    }
+}
+```
+
+Examples/Usages:
+
+ - Creating Optional Instances:
+  ```java
+	// Creates an empty Optional
+	Optional<User> emptyOpt = Optional.empty();
+	emptyOpt.get();
+	
+	
+       	// Creates an Optional with value
+        Optional<User> opt = Optional.of(user);
+
+	// If object can be both null or not null
+	Optional<User> opt = Optional.ofNullable(user);
+  ```
+
+- Accessing the Value of Optional Objects
+ ```java
+	// Using get()
+	String name = "John";
+	Optional<String> opt = Optional.ofNullable(name);
+	System.out.print(opt.get()); // John ; if value did not exist would have printed null
+	
+	
+	// to return default values
+	User user = null;
+	User user2 = new User("anna@gmail.com", "1234");
+	User result = Optional.ofNullable(user).orElse(user2);
+```
+
+
