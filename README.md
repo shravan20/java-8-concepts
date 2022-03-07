@@ -249,7 +249,7 @@ long count = list.stream().filter(String::isEmpty).count();
 Stream<User> stream = list.stream().map(User::new);
 ```
 
-# Optional
+### Optional
 
 The new Optional class is one of the most interesting feature introduced in Java 8 to handle `NullPointerExeception(NPE)`. Essentially a wrapper class that contains an optional value, i.e., it can contain an value or can be empty.
 
