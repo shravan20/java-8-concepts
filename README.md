@@ -301,4 +301,14 @@ Examples/Usages:
 	User result = Optional.ofNullable(user).orElse(user2);
 ```
 
+- Other methods:
 
+```java
+Optional<String> optional = Optional.of("bam");
+
+optional.isPresent();           // true
+optional.get();                 // "bam"
+optional.orElse("fallback");    // "bam"
+
+optional.ifPresent((s) -> System.out.println(s.charAt(0)));     // "b"
+```
