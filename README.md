@@ -24,6 +24,7 @@
 - [Lambda Expressions](#lambda-expression)
 - [Method/Constructor References](#methodconstructor-references)
 - [Optional](#optional)
+- [Streams](#streams)
 
 ---
 
