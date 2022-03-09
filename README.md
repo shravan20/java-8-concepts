@@ -69,7 +69,7 @@ System.out.println(result);    // 25
 ```
 
 
-- ### Binary Operator
+- ### BinaryOperator
 
 `BinaryOperator` is functional interface which extends `BiFunction`. It takes two arguments of the same type and return a result of the same type of the arguments passed.
 
@@ -313,3 +313,17 @@ optional.orElse("fallback");    // "bam"
 
 optional.ifPresent((s) -> System.out.println(s.charAt(0)));     // "b"
 ```
+
+### Streams
+
+In simple words, **streams** are wrappers around a data source, allowing us to operate with that data source and making bulk processing convenient and fast. A stream does not store data and, in that sense, is not a data structure. It also never modifies the underlying data source. Streams are Monads, thus playing a big part in bringing functional programming to Java.
+
+Stream operations are either intermediate or terminal. Intermediate operations return a stream so we can chain multiple intermediate operations without using semicolons. Terminal operations are either void or return a non-stream result.
+
+Most stream operations accept some kind of lambda expression parameter, a functional interface specifying the exact behavior of the operation. Most of those operations must be both non-interfering and stateless.
+
+
+>A function is **non-interfering** when it does not modify the underlying data source of the stream.
+>A function is stateless when the execution of the operation is deterministic.
+
+
