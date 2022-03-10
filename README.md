@@ -327,3 +327,5 @@ Most stream operations accept some kind of lambda expression parameter, a functi
 >A function is stateless when the execution of the operation is deterministic.
 
 
+A Java Stream is a component that is capable of internal iteration of its elements, meaning it can iterate its elements itself. 
+
