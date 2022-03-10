@@ -327,5 +327,10 @@ Most stream operations accept some kind of lambda expression parameter, a functi
 >A function is stateless when the execution of the operation is deterministic.
 
 
-A Java Stream is a component that is capable of internal iteration of its elements, meaning it can iterate its elements itself. 
+A Java Stream is a component that is capable of internal iteration of its elements, meaning it can iterate its elements itself. There are 2 terminologies which are very important, viz.,
+- **Terminal Operations:** The operations which return other than stream are called terminal operations. [count(). min(), max() ..etc]
+- **Non Terminal/Intermediate Operations:** The operations which return stream themselves are called intermediate operations. [filter(), map(), sorted()..etc]
+
+
+
 
