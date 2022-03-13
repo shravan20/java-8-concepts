@@ -332,5 +332,19 @@ A Java Stream is a component that is capable of internal iteration of its elemen
 - **Non Terminal/Intermediate Operations:** The operations which return stream themselves are called intermediate operations. [filter(), map(), sorted()..etc]
 
 
+#### Creating Streams
+- Stream.of()
+- Stream.of(array)
+- List.stream()
+- Stream.generate() or Stream.iterate()
+- Stream of String chars or tokens
+
+
+#### Stream Collectors
+
+- Collect Stream elements to a List
+- Collect Stream elements to an Array
+- 
+
 
 
