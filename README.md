@@ -334,7 +334,26 @@ A Java Stream is a component that is capable of internal iteration of its elemen
 
 #### Creating Streams
 - Stream.of()
+	To create streams from the specified values, we can use `Stream.of(T…t)` method that creates specified t values, where t are the elements. This method returns a sequential Stream containing the t elements.
+
+Example:
+```java
+	Stream<Integer> numbers = Stream.of(1, 2, 3, 4, 5, 6);
+        // Displaying the sequential ordered stream
+	numbers.forEach( number -> System.out.print(number + " ")); // 1 2 3 4 5 6
+```
+
 - Stream.of(array)
+	Two commonly used methods for creating a sequential stream from a specified array are 
+ - `Stream.of`
+ - `Arrays.stream`
+These are used to create a sequential stream from specified array. Both these methods returns a Stream when called with a non-primitive type T.
+
+Example:
+```java
+	String[] arr = new String[] { "a", "b", "c" };
+	Stream<String> streamArr = Arrays.stream(arr);
+```
 - List.stream()
 - Stream.generate() or Stream.iterate()
 - Stream of String chars or tokens
@@ -344,7 +363,7 @@ A Java Stream is a component that is capable of internal iteration of its elemen
 
 - Collect Stream elements to a List
 - Collect Stream elements to an Array
-- 
+
 
 
 
