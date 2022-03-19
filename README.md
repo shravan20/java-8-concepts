@@ -1,4 +1,4 @@
-## Guide to Java 8 Features
+# Guide to Java 8 Features
 
 
  This repository covers features released in Java 8
