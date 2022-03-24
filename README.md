@@ -355,7 +355,38 @@ Example:
 	Stream<String> streamArr = Arrays.stream(arr);
 ```
 - List.stream()
+One of the way to convert list to Streams, is by using the `List.stream()`. The elements from the list are taken and converted to streams.
+
+Example:
+```java
+List<Integer> numbers = new ArrayList<>();
+
+for(int i = 0; i< 10; i++){
+      list.add(i);
+}
+
+Stream<Integer> stream = list.stream();
+stream.forEach(number -> System.out.println(number));  // prints "01234567890"
+```
+
+
 - Stream.generate() or Stream.iterate()
+The `Stream.iterate()` method returns an infinite sequential ordered stream. The first element (index 0) in the Stream will be the provided seed. For n > 0, the element at position n, will be the result of applying the function f to the element at position n - 1.
+
+Example:
+```java
+
+/**
+* In the given example, we are creating an infinite stream of even numbers starting from 0. 
+* Then we are collecting the first 10 elements from the stream to a list.
+*/
+
+List<Integer> numbers = IntStream.iterate(0, i -> i + 2)
+            .mapToObj(Integer::valueOf)
+            .limit(10)
+            .collect(Collectors.toList());
+```
+
 - Stream of String chars or tokens
 
 
