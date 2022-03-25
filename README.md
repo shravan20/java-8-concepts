@@ -387,14 +387,97 @@ List<Integer> numbers = IntStream.iterate(0, i -> i + 2)
             .collect(Collectors.toList());
 ```
 
-- Stream of String chars or tokens
-
 
 #### Stream Collectors
 
+After performing the intermediate operations on elements in the stream, we can collect the processed elements again into a Collection using the stream `Collector` methods.
+
 - Collect Stream elements to a List
+In the given example, first, we are creating a stream on integers 1 to 10. Then we are processing the stream elements to find all even numbers.
+At last, we are collecting all even numbers into a List.
+
+Example:
+```java
+List<Integer> list = new ArrayList<Integer>();
+ 
+for(int i = 1; i< 10; i++){
+      list.add(i);
+}
+
+Stream<Integer> stream = list.stream();
+List<Integer> evenNumbersList = stream
+				    .filter(i -> i%2 == 0)
+                                    .collect(Collectors.toList());
+System.out.print(evenNumbersList); // [2,4,6,8]
+```
+
 - Collect Stream elements to an Array
 
+The given example is similar to the first example shown above. The only difference is that we are collecting the even numbers in an Array.
+
+Example:
+
+```java
+List<Integer> list = new ArrayList<Integer>();
+ 
+for(int i = 1; i< 10; i++){
+      list.add(i);
+}
+
+Stream<Integer> stream = list.stream();
+Integer[] evenNumbersArr = stream.filter(i -> i%2 == 0).toArray(Integer[]::new);
+System.out.print(evenNumbersArr); // 2,4,6,8
+```
 
 
+- Joining Strings With the Stream API
 
+Collectors method to concatenate and join the strings from an stream.
+
+Example:
+```java
+
+String []arrayOfString = {"a","b","c"};
+
+Arrays.asList(arrayOfString)
+      .stream()
+      //.map(...)
+      .collect(Collectors.joining(",")); // "a,b,c"
+```
+
+- Splitting Strings With Stream API
+Split a String into a list of String using Stream API.
+
+Example:
+```java
+
+String str = "a,b,c";
+
+List<String> listString = Stream.of(str.split(","))
+      .map (elem -> new String(elem))
+      .collect(Collectors.toList());
+
+System.out.print(listString); // [a,b,c]
+
+```
+
+#### Stream Operations
+
+There are three brooad types of operations as listed below with the methods as well.
+
+- Intermediate Operations
+  - map()
+  - filter()
+  - sorted()
+
+- Terminal Operations
+  - forEach()
+  - collect()
+  - match()
+  - count()
+  - reduce()
+ 
+- Short Circuit Operations:
+  - anyMatch()
+  - findFirst()
+ 
