@@ -465,10 +465,23 @@ System.out.print(listString); // [a,b,c]
 
 There are three brooad types of operations as listed below with the methods as well.
 
+- Creating Streams
+  - concat()
+  - empty()
+  - generate()
+  - iterate()
+  - of()
+
 - Intermediate Operations
   - map()
   - filter()
   - sorted()
+  - flatMap()
+  - distinct()
+  - peek()
+  - limit()
+  - skip()
+  
 
 - Terminal Operations
   - forEach()
@@ -476,6 +489,11 @@ There are three brooad types of operations as listed below with the methods as w
   - match()
   - count()
   - reduce()
+  - min()
+  - max()
+  - anyMatch()
+  - allMatch()
+  - noneMatch()
  
 - Short Circuit Operations:
   - anyMatch()
