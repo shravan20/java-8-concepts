@@ -495,7 +495,7 @@ There are three brooad types of operations as listed below with the methods as w
   - allMatch()
   - noneMatch()
  
-- Short Circuit Operations:
+- Short Circuit Operations
   - anyMatch()
   - findFirst()
  
