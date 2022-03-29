@@ -25,6 +25,8 @@
 - [Method/Constructor References](#methodconstructor-references)
 - [Optional](#optional)
 - [Streams](#streams)
+- [Java Time API](#java-time-api)
+
 
 ---
 
@@ -499,3 +501,30 @@ There are three brooad types of operations as listed below with the methods as w
   - anyMatch()
   - findFirst()
  
+### Java Time API
+
+Date Time API is one of the biggest features of Java 8 release, which was a consistent approach for Date and Time and addition to the core Java APIs.
+
+Why do we need new Java Date Time API?
+- Existing system did not have well defined and consistent approach of solving the date and time related issues. There was Date class in both `java.util` and `java.sql` packages, whereas formatting and parsing classes were defined in `java.text` package.
+
+- `java.util.Date` contains both date and time values whereas `java.sql.Date` contains only date value. Having this in java.sql package doesn’t make any sense. Also, both the classes have the same name, which is a very bad design itself.
+
+- There are no clearly defined classes for time, timestamp, formatting, and parsing. We have java.text.DateFormat abstract class for parsing and formatting need. Usually, the SimpleDateFormat class is used for parsing and formatting. All the Date classes are mutable, so they are not thread-safe. It’s one of the biggest problems with Java Date and Calendar classes.
+
+- Date class doesn’t provide internationalization, there is no timezone support. So `java.util.Calendar` and `java.util.TimeZone` classes were introduced, but they also have all the problems listed above.
+
+
+To overcome the above issues, Java 8 Date Time Design Principles were implemented,
+- Immutability: All the classes in the new Date-Time API are immutable and good for multithreaded environments.
+- Separation of Concerns: The new API separates clearly between human-readable date time and machine time (Unix timestamp). It defines separate classes for Date, Time, DateTime, Timestamp, Timezone, etc.
+- Clarity: The methods are clearly defined and perform the same action in all the classes. For example, to get the current instance we have now() method. There are format() and parse() methods defined in all these classes rather than having a separate class for them. All the classes use Factory Pattern and Strategy Pattern for better handling. Once you have used the methods in one of the classes, working with other classes won’t be hard.
+- Utility operations: All the new Date-Time API classes come with methods to perform common tasks, such as plus, minus, format, parsing, getting the separate part in date/time, etc.
+- Extendable: The new Date Time API works on the ISO-8601 calendar system but we can use it with other non-ISO calendars as well.
+
+Date Time API Packages:
+- `java.time`: This is the base package of the new Java Date Time API. All the major base classes are part of this package, such as LocalDate, LocalTime, LocalDateTime, Instant, Period, Duration, etc. 
+- `java.time.chrono`: This package defines generic APIs for non-ISO calendar systems. We can extend AbstractChronology class to create our own calendar system.
+- `java.time.format`: This package contains classes used for formatting and parsing date-time objects. Most of the time we would not be directly using them because of principle classes in java.time package provides formatting and parsing methods.
+- `java.time.temporal`: This package contains temporal objects and we can use it to find out the specific dates or times related to the date/time objects. For example, we can use these to find out the first or last day of the month. You can identify these methods easily because they always have the format “withXXX”.
+- `java.time.zone`: This package contains classes for supporting different time zones and their rules.
