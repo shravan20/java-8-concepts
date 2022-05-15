@@ -131,7 +131,7 @@ predicate.negate().test("shravan20")       // false
 
 - ### Supplier
 
-`Supplier` is a functional interface; which takes no arguments and returns a result. Unline Functions, Suppliers do not accept arguments. 
+`Supplier` is a functional interface; which takes no arguments and returns a result. Unlike Functions, Suppliers do not accept arguments. 
 
 Examples:
 
