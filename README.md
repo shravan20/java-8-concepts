@@ -1,6 +1,7 @@
 # Guide to Java 8 Features
 
 
+
  This repository covers features released in Java 8
  Repository contains simple definition of the feature with simplest code snippet
 
