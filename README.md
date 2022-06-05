@@ -3,7 +3,7 @@
 
 
  This repository covers features released in Java 8
- Repository contains simple definition of the feature with simplest code snippet
+ Repository contains simple definition of the feature with simplest code snippet.
 
 ---
 
